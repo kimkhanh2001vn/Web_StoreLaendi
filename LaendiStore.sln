@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33130.400
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaendiStore.Web", "LaendiStore.Web\LaendiStore.Web.csproj", "{3AF156FC-99B6-4F66-9402-BBF8E2505659}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3AF156FC-99B6-4F66-9402-BBF8E2505659}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AF156FC-99B6-4F66-9402-BBF8E2505659}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AF156FC-99B6-4F66-9402-BBF8E2505659}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AF156FC-99B6-4F66-9402-BBF8E2505659}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {88E60F6A-5634-4F9F-ABB4-A4267FF6B976}
+	EndGlobalSection
+EndGlobal
