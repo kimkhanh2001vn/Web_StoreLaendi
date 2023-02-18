@@ -27,7 +27,6 @@ D:\Laendi_Tech\LaendiStore\LaendiStore.Web\obj\Debug\LaendiStore.Web.csproj.Core
 D:\Laendi_Tech\LaendiStore\LaendiStore.Web\obj\Debug\LaendiStore.Web.csproj.CopyComplete
 D:\Laendi_Tech\LaendiStore\LaendiStore.Web\obj\Debug\LaendiStore.Web.dll
 D:\Laendi_Tech\LaendiStore\LaendiStore.Web\obj\Debug\LaendiStore.Web.pdb
-D:\Laendi_Tech\LaendiStore\LaendiStore.Web\obj\Debug\LaendiStore.Web.csproj.AssemblyReference.cache
 D:\Laendi_Tech\LaendiStore\LaendiStore.Web\bin\roslyn\csc.exe
 D:\Laendi_Tech\LaendiStore\LaendiStore.Web\bin\roslyn\csc.exe.config
 D:\Laendi_Tech\LaendiStore\LaendiStore.Web\bin\roslyn\csc.rsp

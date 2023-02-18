@@ -1,0 +1,180 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from zairito-html.zainiktheme.com/demo/sign-up.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 08:43:06 GMT -->
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sign Up - Laendi Store</title>
+    <meta name="description" content="Zairito - eCommerce HTML Template" />
+    <meta name="keywords" content="business,eCommerce, Ecommerce, ecommerce, shop, shopify, shopify ecommerce, creative, woocommerce, design, gallery, minimal, modern, html, html5, responsive" />
+    <meta name="author" content="Zairito" />
+
+    <!-- fonts file -->
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allison&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+
+    <!-- css file  -->
+    @Styles.Render("~/assets/css")
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="~/assets/images/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Preloader Area Start -->
+    <div id="preloader">
+        <div id="status">
+            <img src="~/assets/images/preloader.svg" alt="img" />
+        </div>
+    </div>
+    <!-- Preloader Area End -->
+    @Html.Action("Header", "Home")
+    <!-- Cart Offcanvas Sidebar Menu area Start here  -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvasSidebar" aria-labelledby="cartOffcanvasSidebarLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="cartOffcanvasSidebarLabel">Shopping Cart</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+
+            <div class="cart-product-list">
+
+                <!-- Product item start -->
+                <div class="product-item cart-product-item">
+                    <div class="single-grid-product">
+                        <div class="product-top">
+                            <a href="single-product.html"><img class="product-thumbnal" src="assets/images/cart-sidebar-img1.png" alt="cart"></a>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name-part">
+                                <h4 class="product-catagory">ELLA - HALOTHEMES</h4>
+                                <h3 class="product-name"><a class="product-link" href="single-product.html">Premier Cropped Jean</a></h3>
+
+                                <div class="cart-quantity input-group">
+                                    <div class="increase-btn dec qtybutton btn">-</div>
+                                    <input class="qty-input cart-plus-minus-box" type="text" name="qtybutton" value="1" readonly />
+                                    <div class="increase-btn inc qtybutton btn">+</div>
+                                </div>
+
+                                <button class="cart-remove-btn">Remove</button>
+                            </div>
+                            <div class="product-price">
+                                <span class="regular-price">$220.08</span>
+                                <span class="price">$150.08</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product item end -->
+                <!-- Product item start -->
+                <div class="product-item cart-product-item">
+                    <div class="single-grid-product">
+                        <div class="product-top">
+                            <a href="single-product.html"><img class="product-thumbnal" src="assets/images/cart-sidebar-img2.png" alt="cart"></a>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name-part">
+                                <h4 class="product-catagory">New - Collections</h4>
+                                <h3 class="product-name"><a class="product-link" href="single-product.html">Premier Bag Jean</a></h3>
+
+                                <div class="cart-quantity input-group">
+                                    <div class="increase-btn dec qtybutton btn">-</div>
+                                    <input class="qty-input cart-plus-minus-box" type="text" name="qtybutton" value="1" readonly />
+                                    <div class="increase-btn inc qtybutton btn">+</div>
+                                </div>
+
+                                <button class="cart-remove-btn">Remove</button>
+                            </div>
+                            <div class="product-price">
+                                <span class="regular-price">$215.08</span>
+                                <span class="price">$150.08</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product item end -->
+            </div>
+
+            <div class="total-bottom-part">
+                <div class="total-count d-flex">
+                    <h3>Total</h3>
+                    <h4>$567.00</h4>
+                </div>
+                <a href="checkout.html" class="proceed-to-btn d-block text-center">
+                    Proceed To Checkout
+                </a>
+                <div class="view-cart-go">
+                    <a href="cart.html">View Cart</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Cart Offcanvas Sidebar Menu area end here  -->
+    <!-- breadcrumb area start here  -->
+    <div class="breadcrumb-area">
+        <div class="container">
+            <div class="breadcrumb-wrap text-center">
+                <h2 class="page-title">Sign Up</h2>
+                <ul class="breadcrumb-pages">
+                    <li class="page-item"><a class="page-item-link" href="index.html">Home</a></li>
+                    <li class="page-item">Sign Up</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- breadcrumb area end here  -->
+    <!-- about us area start here  -->
+    <div class="sign-in-page sign-up-page section">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-12 col-lg-5">
+                    <div class="login-wrap">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <span class="far fa-user"></span>
+                        </div>
+                        <h1 class="text-center mb-4">Sign Up</h1>
+                        <form class="login-form">
+                            <div class="form-group">
+                                <input type="text" class="form-control rounded-left" placeholder="Name" required="">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control rounded-left" placeholder="Email" required="">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control rounded-left" placeholder="Username" required="">
+                            </div>
+                            <div class="form-group d-flex">
+                                <input type="password" class="form-control rounded-left" placeholder="Password" required="">
+                            </div>
+                            <div class="form-group">
+                                <button type="button" class="form-control btn btn-primary rounded submit px-3 primary-btn">Sign Up</button>
+                            </div>
+
+                            <div class="already-have-account">
+                                Already have an account?<a href="/login/signin" class="forget-password-link">Sign In</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- about us area end here  -->
+    @Html.Action("Footer", "Home")
+    <!-- Js file  -->
+    @Scripts.Render("~/bundles/jquery")
+
+    @Scripts.Render("~/assets/js")
+</body>
+
+<!-- Mirrored from zairito-html.zainiktheme.com/demo/sign-up.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 08:43:06 GMT -->
+</html>

@@ -26,5 +26,15 @@ namespace LaendiStore.Web.Controllers
 
             return View();
         }
+
+        public PartialViewResult Header()
+        {
+            return PartialView();
+        }
+
+        public PartialViewResult Footer()
+        {
+            return PartialView();
+        }
     }
 }
