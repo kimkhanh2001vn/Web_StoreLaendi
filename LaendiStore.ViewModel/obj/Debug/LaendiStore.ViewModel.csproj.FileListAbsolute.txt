@@ -1,0 +1,6 @@
+D:\Laendi_Tech\LaendiStore\LaendiStore.ViewModel\bin\Debug\LaendiStore.ViewModel.dll
+D:\Laendi_Tech\LaendiStore\LaendiStore.ViewModel\bin\Debug\LaendiStore.ViewModel.pdb
+D:\Laendi_Tech\LaendiStore\LaendiStore.ViewModel\obj\Debug\LaendiStore.ViewModel.csproj.AssemblyReference.cache
+D:\Laendi_Tech\LaendiStore\LaendiStore.ViewModel\obj\Debug\LaendiStore.ViewModel.csproj.CoreCompileInputs.cache
+D:\Laendi_Tech\LaendiStore\LaendiStore.ViewModel\obj\Debug\LaendiStore.ViewModel.dll
+D:\Laendi_Tech\LaendiStore\LaendiStore.ViewModel\obj\Debug\LaendiStore.ViewModel.pdb

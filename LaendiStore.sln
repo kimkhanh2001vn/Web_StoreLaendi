@@ -5,6 +5,16 @@ VisualStudioVersion = 16.0.33130.400
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaendiStore.Web", "LaendiStore.Web\LaendiStore.Web.csproj", "{3AF156FC-99B6-4F66-9402-BBF8E2505659}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaendiStore.Data", "LaendiStore.Model\LaendiStore.Data.csproj", "{BA7FD45E-8BC8-4835-9458-4AD23A1267C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaendiStore.Common", "LaendiStore.Common\LaendiStore.Common.csproj", "{64C2BD45-8A67-43C0-9A48-3BF0994ED5EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaendiStore.IBusiness", "LaendiStore.IBusiness\LaendiStore.IBusiness.csproj", "{416E57DC-F1BF-44A2-A817-C39CF686F7F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaendiStore.Business", "LaendiStore.Business\LaendiStore.Business.csproj", "{5D114804-1B73-4C56-839B-E63ABE05DA6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaendiStore.ViewModel", "LaendiStore.ViewModel\LaendiStore.ViewModel.csproj", "{BA68B7A7-3891-415D-8EF1-A8D564010810}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +25,26 @@ Global
 		{3AF156FC-99B6-4F66-9402-BBF8E2505659}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3AF156FC-99B6-4F66-9402-BBF8E2505659}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3AF156FC-99B6-4F66-9402-BBF8E2505659}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA7FD45E-8BC8-4835-9458-4AD23A1267C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA7FD45E-8BC8-4835-9458-4AD23A1267C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA7FD45E-8BC8-4835-9458-4AD23A1267C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA7FD45E-8BC8-4835-9458-4AD23A1267C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64C2BD45-8A67-43C0-9A48-3BF0994ED5EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64C2BD45-8A67-43C0-9A48-3BF0994ED5EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64C2BD45-8A67-43C0-9A48-3BF0994ED5EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64C2BD45-8A67-43C0-9A48-3BF0994ED5EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{416E57DC-F1BF-44A2-A817-C39CF686F7F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{416E57DC-F1BF-44A2-A817-C39CF686F7F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{416E57DC-F1BF-44A2-A817-C39CF686F7F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{416E57DC-F1BF-44A2-A817-C39CF686F7F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D114804-1B73-4C56-839B-E63ABE05DA6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D114804-1B73-4C56-839B-E63ABE05DA6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D114804-1B73-4C56-839B-E63ABE05DA6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D114804-1B73-4C56-839B-E63ABE05DA6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA68B7A7-3891-415D-8EF1-A8D564010810}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA68B7A7-3891-415D-8EF1-A8D564010810}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA68B7A7-3891-415D-8EF1-A8D564010810}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA68B7A7-3891-415D-8EF1-A8D564010810}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

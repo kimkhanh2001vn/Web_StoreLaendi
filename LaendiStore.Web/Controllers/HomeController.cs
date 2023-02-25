@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LaendiStore.IBusiness;
+using LaendiStore.Data.DBContext;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,8 +10,14 @@ namespace LaendiStore.Web.Controllers
 {
     public class HomeController : Controller
     {
+        private IProductReponsitory _productReponsitory;
+        public HomeController(IProductReponsitory productReponsitory)
+        {
+            this._productReponsitory = productReponsitory;
+        }
         public ActionResult Index()
         {
+            ViewBag.port = _productReponsitory.GetAll();
             return View();
         }
 

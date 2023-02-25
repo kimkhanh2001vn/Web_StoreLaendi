@@ -1,0 +1,17 @@
+D:\Laendi_Tech\LaendiStore\LaendiStore.Business\obj\Debug\LaendiStore.Business.csproj.AssemblyReference.cache
+D:\Laendi_Tech\LaendiStore\LaendiStore.Business\obj\Debug\LaendiStore.Business.csproj.CoreCompileInputs.cache
+D:\Laendi_Tech\LaendiStore\LaendiStore.Business\bin\Debug\LaendiStore.Business.dll.config
+D:\Laendi_Tech\LaendiStore\LaendiStore.Business\bin\Debug\LaendiStore.Business.dll
+D:\Laendi_Tech\LaendiStore\LaendiStore.Business\bin\Debug\LaendiStore.Business.pdb
+D:\Laendi_Tech\LaendiStore\LaendiStore.Business\bin\Debug\EntityFramework.dll
+D:\Laendi_Tech\LaendiStore\LaendiStore.Business\bin\Debug\EntityFramework.SqlServer.dll
+D:\Laendi_Tech\LaendiStore\LaendiStore.Business\bin\Debug\LaendiStore.Data.dll
+D:\Laendi_Tech\LaendiStore\LaendiStore.Business\bin\Debug\LaendiStore.IBusiness.dll
+D:\Laendi_Tech\LaendiStore\LaendiStore.Business\bin\Debug\LaendiStore.IBusiness.pdb
+D:\Laendi_Tech\LaendiStore\LaendiStore.Business\bin\Debug\LaendiStore.Data.pdb
+D:\Laendi_Tech\LaendiStore\LaendiStore.Business\bin\Debug\LaendiStore.Data.dll.config
+D:\Laendi_Tech\LaendiStore\LaendiStore.Business\bin\Debug\EntityFramework.xml
+D:\Laendi_Tech\LaendiStore\LaendiStore.Business\bin\Debug\EntityFramework.SqlServer.xml
+D:\Laendi_Tech\LaendiStore\LaendiStore.Business\obj\Debug\LaendiStore.Business.csproj.CopyComplete
+D:\Laendi_Tech\LaendiStore\LaendiStore.Business\obj\Debug\LaendiStore.Business.dll
+D:\Laendi_Tech\LaendiStore\LaendiStore.Business\obj\Debug\LaendiStore.Business.pdb
