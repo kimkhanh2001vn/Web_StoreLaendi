@@ -22,6 +22,8 @@ namespace LaendiStore.Data.EF
 
         [Required]
         public string Name { get; set; }
+        [StringLength(100)]
+        public string Value { get; set; }
 
         [Required]
         [StringLength(256)]

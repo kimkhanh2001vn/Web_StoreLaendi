@@ -9,6 +9,9 @@ namespace LaendiStore.IBusiness
 {
     public interface ICustomerRepository : IGenericReponsitory<Customer>
     {
-        bool Login(string username, string password);
+        Customer GetByUserName(string username);
+        int Login(string username, string password);
+        bool CheckContainAccount(string email, string username);
+        Customer GetbyEmailResestPassword(string email);
     }
 }

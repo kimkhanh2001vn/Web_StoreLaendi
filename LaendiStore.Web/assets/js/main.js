@@ -544,15 +544,6 @@
     });
 
     /*----------------------------
-      Offer Popup Modal
-    ------------------------------ */
-    $(window).on('load', function () {
-      setTimeout(function () {
-          $('#popUpModal').modal('show');
-      }, 500);
-    });
-
-    /*----------------------------
       Product size change
     ------------------------------ */
     if($(".featured-productss-area, .featured-products-area-v2, .product-list, .product-single-right").length) {

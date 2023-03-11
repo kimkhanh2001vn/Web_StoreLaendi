@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LaendiStore.Common;
 
 namespace LaendiStore.Business
 {
@@ -16,5 +17,11 @@ namespace LaendiStore.Business
         {
             this._context = new eLaendiStoreDBContext();       
         }
+
+        public List<Product> GetFeaturedProduct(int countNumber)
+        {
+            return _context.Products.Where(x => x.PromotionPrice.HasValue).Take(countNumber).ToList();
+        }
+        
     }
 }

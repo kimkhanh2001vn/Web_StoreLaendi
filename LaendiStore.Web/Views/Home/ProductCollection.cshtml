@@ -1,0 +1,687 @@
+﻿@using LaendiStore.ViewModel
+@{
+    ViewBag.Title = "ProductCollection";
+    var objProduct = (List<ProductByCategoryViewModel>)ViewBag.ListProduct;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <!-- breadcrumb area start here  -->
+    <div class="breadcrumb-area">
+        <div class="container">
+            <div class="breadcrumb-wrap text-center">
+                <h2 class="page-title">Product Collections</h2>
+                <ul class="breadcrumb-pages">
+                    <li class="page-item"><a class="page-item-link" href="index.html">Home</a></li>
+                    <li class="page-item">Product Collections</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- breadcrumb area end here  -->
+    <!-- Product Area Start -->
+    <div class="product-area section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 col-lg-8">
+                    <div class="product-section-top">
+                        <div class="row align-items-center">
+                            <div class="col-md-3">
+                                <div class="product-section-top-left">
+                                    <button class="sidebar-filter d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                                        Filter <img src="~/assets/images/angle-down.svg" alt="angle-down" />
+                                    </button>
+                                    <div class="list-grid-view">
+                                        <a href="shop-list-left-sidebar.html" class="view-btn list-view active"><img class="view-icon" src="~/assets/images/view-list.svg" alt="view-list" /></a>
+                                        <a href="shop-grid-left-sidebar.html" class="view-btn grid-view"><img class="view-icon" src="~/assets/images/view-grid.svg" alt="view-grid" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="product-filter">
+                                    <p class="shoing-result">Showing 1 - 9 of 9 result</p>
+                                    <form>
+                                        <select class="form-select">
+                                            <option selected>Default Sorting</option>
+                                            <option value="1">Categories</option>
+                                            <option value="2">Colors</option>
+                                            <option value="3">Tags</option>
+                                        </select>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-list">
+
+                        <!--View Item Product-->
+                        @foreach (var item in objProduct)
+                        {
+                            <div class="single-list-product">
+                                <div class="product-left">
+                                    <a href="single-product.html"><img class="product-thumbnal" src="~/assets/images/list-product-1.png" alt="product" /></a>
+                                    <div class="product-flags">
+                                        <span class="product-flag sale">SALE</span>
+                                        <span class="product-flag discount">-15%</span>
+                                    </div>
+                                </div>
+                                <div class="product-right">
+                                    <div class="product-catagory-review d-flex align-items-center">
+
+                                        <h4 class="product-catagory">@item.categorys.Name</h4>
+
+                                        <ul class="product-review">
+                                            <li class="review-item active"><i class="flaticon-star"></i></li>
+                                            <li class="review-item active"><i class="flaticon-star"></i></li>
+                                            <li class="review-item active"><i class="flaticon-star"></i></li>
+                                            <li class="review-item"><i class="flaticon-star"></i></li>
+                                            <li class="review-item"><i class="flaticon-star"></i></li>
+                                        </ul>
+                                    </div>
+                                    <h3 class="product-name"><a class="product-link" href="/home/productDetail/@item.products.ID">@item.products.Name</a></h3>
+                                    <div class="product-price-color d-flex align-items-center">
+                                        <div class="product-price">
+                                            <span class="regular-price">@Html.FormatValue(item.products.Price, "{0:#,##0}") VNĐ</span>
+                                            <span class="price">@Html.FormatValue(item.products.PromotionPrice, "{0:#,##0}") VNĐ</span>
+                                        </div>
+                                        <div class="variable-single-item color-switch">
+                                            <div class="product-variable-color">
+                                                <label>
+                                                    <input name="modal-product-color"
+                                                           class="color-select" type="radio" checked="">
+                                                    <span class="product-color-black"></span>
+                                                </label>
+                                                <label>
+                                                    <input name="modal-product-color"
+                                                           class="color-select" type="radio">
+                                                    <span class="product-color-tomato"></span>
+                                                </label>
+
+                                                <label>
+                                                    <input name="modal-product-color"
+                                                           class="color-select" type="radio">
+                                                    <span class="product-color-gray"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="size-switch">
+                                        <li class="single-size active">XL</li>
+                                        <li class="single-size">LARGE</li>
+                                        <li class="single-size">SMALL</li>
+                                    </ul>
+                                    <p class="prdouct-content">@item.products.Description</p>
+                                    <ul class="prdouct-btn-wrapper d-flex align-items-center">
+                                        <li class="single-product-btn">
+                                            <a href="@Url.Action("AddItem", "Cart", new { cartId = item.products.ID, quantity = 1})" title="Add to cart" class="add-cart">Add To Cart <i class="icon fas fa-plus-circle"></i></a>
+                                        </li>
+                                        <li class="single-product-btn">
+                                            <a class="addCompare product-btn" href="wish-list.html" title="Add to wishlist"><i class="icon flaticon-like"></i></a>
+                                        </li>
+                                        <li class="single-product-btn">
+                                            <a class="addToWishlist product-btn" href="compare.html" title="Add to compare"><i class="icon flaticon-bar-chart"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        }
+
+                        <!--End View Item Product-->
+
+                        <div class="pagination-area mt-30">
+                            <ul class="paginations text-center">
+                                <li class="pagination-page"><a href="#" class="pagination-link"><i class="fas fa-angle-double-left"></i></a></li>
+                                <li class="pagination-page active"><a href="#" class="pagination-link">1</a></li>
+                                <li class="pagination-page"><a href="#" class="pagination-link">2</a></li>
+                                <li class="pagination-page"><a href="#" class="pagination-link">3</a></li>
+                                <li class="pagination-page"><a href="#" class="pagination-link"><i class="fas fa-angle-double-right"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4">
+                    <div class="sidebar-widget-area mobile-sidebar">
+                        <div class="sidebar-widget-header d-block d-lg-none">
+                            <div class="widget-header-wrap">
+                                <h5 class="offcanvas-title">Filter</h5>
+                                <button type="button" class="btn-close text-reset sidebar-close"></button>
+                            </div>
+                        </div>
+                        <div class="single-widget search-widget">
+                            <h3 class="widget-title">Search Here</h3>
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="searchwidget" name="searchwidget" placeholder="Product Store" />
+                                    <button type="button" class="search-btn"><i class="flaticon-search"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="single-widget categories-widget">
+                            <h3 class="widget-title">Categories</h3>
+                            <div class="categories-list">
+                                <div class="single-categorie">
+                                    <div class="categorie-left">
+                                        <input class="form-check-input" type="checkbox" id="Tshirts">
+                                        <label class="form-check-label" for="Tshirts">T-shirts & shirts</label>
+                                    </div>
+                                    <span class="categories-count">16</span>
+                                </div>
+                                <div class="single-categorie">
+                                    <div class="categorie-left">
+                                        <input class="form-check-input" type="checkbox" id="Jackets">
+                                        <label class="form-check-label" for="Jackets">Jackets</label>
+                                    </div>
+                                    <span class="categories-count">6</span>
+                                </div>
+                                <div class="single-categorie">
+                                    <div class="categorie-left">
+                                        <input class="form-check-input" type="checkbox" id="Sports">
+                                        <label class="form-check-label" for="Sports">Sports & Active Wear</label>
+                                    </div>
+                                    <span class="categories-count">8</span>
+                                </div>
+                                <div class="single-categorie">
+                                    <div class="categorie-left">
+                                        <input class="form-check-input" type="checkbox" id="Blazers">
+                                        <label class="form-check-label" for="Blazers">Blazers & Coats</label>
+                                    </div>
+                                    <span class="categories-count">10</span>
+                                </div>
+                                <div class="single-categorie">
+                                    <div class="categorie-left">
+                                        <input class="form-check-input" type="checkbox" id="Overshirts">
+                                        <label class="form-check-label" for="Overshirts">Overshirts</label>
+                                    </div>
+                                    <span class="categories-count">3</span>
+                                </div>
+                                <div class="single-categorie">
+                                    <div class="categorie-left">
+                                        <input class="form-check-input" type="checkbox" id="Coats">
+                                        <label class="form-check-label" for="Coats">Coats & Jackets</label>
+                                    </div>
+                                    <span class="categories-count">25</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-widget price-widget">
+                            <h3 class="widget-title">Price</h3>
+                            <form>
+                                <div class="price-wrap">
+                                    <div class="price-wrap-left">
+                                        <div class="single-price">
+                                            <input type="number" class="form-control" id="minprice" name="minprice" placeholder="$ Min" />
+                                        </div>
+                                        <div class="single-price">
+                                            <input type="number" class="form-control" id="maxprice" name="maxprice" placeholder="$ Max" />
+                                        </div>
+                                    </div>
+                                    <button type="button" class="price-submit"><i class="fas fa-play"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="single-widget colors-widget">
+                            <h3 class="widget-title">Colors</h3>
+                            <div class="colors-list">
+                                <div class="single-colors">
+                                    <div class="colors-left">
+                                        <input class="form-check-input green" type="checkbox" id="Jungle">
+                                        <label class="form-check-label" for="Jungle">Jungle Green</label>
+                                    </div>
+                                    <span class="colors-count">15</span>
+                                </div>
+                                <div class="single-colors">
+                                    <div class="colors-left">
+                                        <input class="form-check-input cerise" type="checkbox" id="Cerise">
+                                        <label class="form-check-label" for="Cerise">Cerise</label>
+                                    </div>
+                                    <span class="colors-count">18</span>
+                                </div>
+                                <div class="single-colors">
+                                    <div class="colors-left">
+                                        <input class="form-check-input magi-mint" type="checkbox" id="MagicMint">
+                                        <label class="form-check-label" for="MagicMint">Magic Mint</label>
+                                    </div>
+                                    <span class="colors-count">9</span>
+                                </div>
+                                <div class="single-colors">
+                                    <div class="colors-left">
+                                        <input class="form-check-input pink-sherbet" type="checkbox" id="PinkSherbet">
+                                        <label class="form-check-label" for="PinkSherbet">Pink Sherbet</label>
+                                    </div>
+                                    <span class="colors-count">26</span>
+                                </div>
+                                <div class="single-colors">
+                                    <div class="colors-left">
+                                        <input class="form-check-input vivid-tangerine" type="checkbox" id="VividTangerine">
+                                        <label class="form-check-label" for="VividTangerine">Vivid Tangerine</label>
+                                    </div>
+                                    <span class="colors-count">6</span>
+                                </div>
+                                <div class="single-colors">
+                                    <div class="colors-left">
+                                        <input class="form-check-input hot-magenta" type="checkbox" id="HotMagenta">
+                                        <label class="form-check-label" for="HotMagenta">Hot Magenta</label>
+                                    </div>
+                                    <span class="colors-count">11</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-widget size-widget">
+                            <h3 class="widget-title">Size</h3>
+                            <div class="size-list">
+                                <div class="single-size">
+                                    <input class="form-check-input" type="checkbox" id="SMALL">
+                                    <label class="form-check-label" for="SMALL">SMALL</label>
+                                </div>
+                                <div class="single-size">
+                                    <input class="form-check-input" type="checkbox" id="MEDIUM">
+                                    <label class="form-check-label" for="MEDIUM">MEDIUM</label>
+                                </div>
+                                <div class="single-size">
+                                    <input class="form-check-input" type="checkbox" id="LARGE">
+                                    <label class="form-check-label" for="LARGE">LARGE</label>
+                                </div>
+                                <div class="single-size">
+                                    <input class="form-check-input" type="checkbox" id="XL">
+                                    <label class="form-check-label" for="XL">XL</label>
+                                </div>
+                                <div class="single-size">
+                                    <input class="form-check-input" type="checkbox" id="XXL">
+                                    <label class="form-check-label" for="XXL">XXL</label>
+                                </div>
+                                <div class="single-size">
+                                    <input class="form-check-input" type="checkbox" id="XXXL">
+                                    <label class="form-check-label" for="XXXL">XXXL</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-widget brand-widget">
+                            <h3 class="widget-title">Brand</h3>
+                            <div class="brand-list">
+                                <div class="single-brand">
+                                    <div class="brand-left">
+                                        <input class="form-check-input" type="checkbox" id="Renuar">
+                                        <label class="form-check-label" for="Renuar">Renuar</label>
+                                    </div>
+                                    <span class="brand-count">55</span>
+                                </div>
+                                <div class="single-brand">
+                                    <div class="brand-left">
+                                        <input class="form-check-input" type="checkbox" id="Zara">
+                                        <label class="form-check-label" for="Zara">Zara</label>
+                                    </div>
+                                    <span class="brand-count">64</span>
+                                </div>
+                                <div class="single-brand">
+                                    <div class="brand-left">
+                                        <input class="form-check-input" type="checkbox" id="Bershka">
+                                        <label class="form-check-label" for="Bershka">Bershka</label>
+                                    </div>
+                                    <span class="brand-count">81</span>
+                                </div>
+                                <div class="single-brand">
+                                    <div class="brand-left">
+                                        <input class="form-check-input" type="checkbox" id="HM">
+                                        <label class="form-check-label" for="HM">H&M</label>
+                                    </div>
+                                    <span class="brand-count">77</span>
+                                </div>
+                                <div class="single-brand">
+                                    <div class="brand-left">
+                                        <input class="form-check-input" type="checkbox" id="Stradivarius">
+                                        <label class="form-check-label" for="Stradivarius">Stradivarius</label>
+                                    </div>
+                                    <span class="brand-count">75</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-widget tags-widget">
+                            <h3 class="widget-title">Tags</h3>
+                            <ul class="tags-list">
+                                <li class="tag-item"><a class="tag-link active" href="shop-list-left-sidebar.html">Fashion</a></li>
+                                <li class="tag-item"><a class="tag-link" href="shop-list-left-sidebar.html">Hats</a></li>
+                                <li class="tag-item"><a class="tag-link" href="shop-list-left-sidebar.html">Vagabond</a></li>
+                                <li class="tag-item"><a class="tag-link" href="shop-list-left-sidebar.html">Sandal</a></li>
+                                <li class="tag-item"><a class="tag-link" href="shop-list-left-sidebar.html">Beachwear</a></li>
+                                <li class="tag-item"><a class="tag-link" href="shop-list-left-sidebar.html">Sunglasses</a></li>
+                                <li class="tag-item"><a class="tag-link" href="shop-list-left-sidebar.html">Denim</a></li>
+                                <li class="tag-item"><a class="tag-link" href="shop-list-left-sidebar.html">Magenta</a></li>
+                                <li class="tag-item"><a class="tag-link" href="shop-list-left-sidebar.html">leather</a></li>
+                                <li class="tag-item"><a class="tag-link" href="shop-list-left-sidebar.html">Vagabond</a></li>
+                            </ul>
+                        </div>
+                        <div class="single-widget rating-widget">
+                            <h3 class="widget-title">Rating</h3>
+                            <ul class="rating-list">
+                                <li class="rating-item">
+                                    <a class="rating-link" href="#">
+                                        <i class="flaticon-star active"></i>
+                                        <i class="flaticon-star active"></i>
+                                        <i class="flaticon-star active"></i>
+                                        <i class="flaticon-star active"></i>
+                                        <i class="flaticon-star active"></i>
+                                    </a>
+                                </li>
+                                <li class="rating-item">
+                                    <a class="rating-link" href="#">
+                                        <i class="flaticon-star active"></i>
+                                        <i class="flaticon-star active"></i>
+                                        <i class="flaticon-star active"></i>
+                                        <i class="flaticon-star active"></i>
+                                        <i class="flaticon-star"></i>
+                                        <span class="and-up-text">And Up</span>
+                                    </a>
+                                </li>
+                                <li class="rating-item">
+                                    <a class="rating-link" href="#">
+                                        <i class="flaticon-star active"></i>
+                                        <i class="flaticon-star active"></i>
+                                        <i class="flaticon-star active"></i>
+                                        <i class="flaticon-star"></i>
+                                        <i class="flaticon-star"></i>
+                                        <span class="and-up-text">And Up</span>
+                                    </a>
+                                </li>
+                                <li class="rating-item">
+                                    <a class="rating-link" href="#">
+                                        <i class="flaticon-star active"></i>
+                                        <i class="flaticon-star active"></i>
+                                        <i class="flaticon-star"></i>
+                                        <i class="flaticon-star"></i>
+                                        <i class="flaticon-star"></i>
+                                        <span class="and-up-text">And Up</span>
+                                    </a>
+                                </li>
+                                <li class="rating-item">
+                                    <a class="rating-link" href="#">
+                                        <i class="flaticon-star active"></i>
+                                        <i class="flaticon-star"></i>
+                                        <i class="flaticon-star"></i>
+                                        <i class="flaticon-star"></i>
+                                        <i class="flaticon-star"></i>
+                                        <span class="and-up-text">And Up</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- For Mobile Filter Sidebar Start -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Filter</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="sidebar-widget-area">
+                <div class="single-widget search-widget p-0 bg-transparent">
+                    <h3 class="widget-title">Search Here</h3>
+                    <form action="#">
+                        <div class="form-group">
+                            <input type="text" class="form-control bg-color" id="searchwidget1" name="searchwidget1" placeholder="Product Store" />
+                            <button type="submit" class="search-btn"><i class="flaticon-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="single-widget categories-widget p-0 bg-transparent">
+                    <h3 class="widget-title">Categories</h3>
+                    <div class="categories-list">
+                        <div class="single-categorie">
+                            <div class="categorie-left">
+                                <input class="form-check-input" type="checkbox" id="Tshirts1">
+                                <label class="form-check-label" for="Tshirts1">T-shirts & shirts</label>
+                            </div>
+                            <span class="categories-count">16</span>
+                        </div>
+                        <div class="single-categorie">
+                            <div class="categorie-left">
+                                <input class="form-check-input" type="checkbox" id="Jackets1">
+                                <label class="form-check-label" for="Jackets1">Jackets</label>
+                            </div>
+                            <span class="categories-count">6</span>
+                        </div>
+                        <div class="single-categorie">
+                            <div class="categorie-left">
+                                <input class="form-check-input" type="checkbox" id="Sports1">
+                                <label class="form-check-label" for="Sports1">Sports & Active Wear</label>
+                            </div>
+                            <span class="categories-count">8</span>
+                        </div>
+                        <div class="single-categorie">
+                            <div class="categorie-left">
+                                <input class="form-check-input" type="checkbox" id="Blazers1">
+                                <label class="form-check-label" for="Blazers1">Blazers & Coats</label>
+                            </div>
+                            <span class="categories-count">10</span>
+                        </div>
+                        <div class="single-categorie">
+                            <div class="categorie-left">
+                                <input class="form-check-input" type="checkbox" id="Overshirts1">
+                                <label class="form-check-label" for="Overshirts1">Overshirts</label>
+                            </div>
+                            <span class="categories-count">3</span>
+                        </div>
+                        <div class="single-categorie">
+                            <div class="categorie-left">
+                                <input class="form-check-input" type="checkbox" id="Coats1">
+                                <label class="form-check-label" for="Coats1">Coats & Jackets</label>
+                            </div>
+                            <span class="categories-count">25</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-widget price-widget p-0 bg-transparent">
+                    <h3 class="widget-title">Price</h3>
+                    <form action="#">
+                        <div class="price-wrap">
+                            <div class="price-wrap-left">
+                                <div class="single-price">
+                                    <input type="number" class="form-control" id="minprice1" name="minprice1" placeholder="$ Min" />
+                                </div>
+                                <div class="single-price">
+                                    <input type="number" class="form-control" id="maxprice1" name="maxprice1" placeholder="$ Max" />
+                                </div>
+                            </div>
+                            <button type="submit" class="price-submit"><i class="fas fa-play"></i></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="single-widget colors-widget p-0 bg-transparent">
+                    <h3 class="widget-title">Colors</h3>
+                    <div class="colors-list">
+                        <div class="single-colors">
+                            <div class="colors-left">
+                                <input class="form-check-input green" type="checkbox" id="Jungle1">
+                                <label class="form-check-label" for="Jungle1">Jungle Green</label>
+                            </div>
+                            <span class="colors-count">15</span>
+                        </div>
+                        <div class="single-colors">
+                            <div class="colors-left">
+                                <input class="form-check-input cerise" type="checkbox" id="Cerise1">
+                                <label class="form-check-label" for="Cerise1">Cerise</label>
+                            </div>
+                            <span class="colors-count">18</span>
+                        </div>
+                        <div class="single-colors">
+                            <div class="colors-left">
+                                <input class="form-check-input magi-mint" type="checkbox" id="MagicMint1">
+                                <label class="form-check-label" for="MagicMint1">Magic Mint</label>
+                            </div>
+                            <span class="colors-count">9</span>
+                        </div>
+                        <div class="single-colors">
+                            <div class="colors-left">
+                                <input class="form-check-input pink-sherbet" type="checkbox" id="PinkSherbet1">
+                                <label class="form-check-label" for="PinkSherbet1">Pink Sherbet</label>
+                            </div>
+                            <span class="colors-count">26</span>
+                        </div>
+                        <div class="single-colors">
+                            <div class="colors-left">
+                                <input class="form-check-input vivid-tangerine" type="checkbox" id="VividTangerine1">
+                                <label class="form-check-label" for="VividTangerine1">Vivid Tangerine</label>
+                            </div>
+                            <span class="colors-count">6</span>
+                        </div>
+                        <div class="single-colors">
+                            <div class="colors-left">
+                                <input class="form-check-input hot-magenta" type="checkbox" id="HotMagenta1">
+                                <label class="form-check-label" for="HotMagenta1">Hot Magenta</label>
+                            </div>
+                            <span class="colors-count">11</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-widget size-widget p-0 bg-transparent">
+                    <h3 class="widget-title">Size</h3>
+                    <div class="size-list">
+                        <div class="single-size">
+                            <input class="form-check-input" type="checkbox" id="SMALL1">
+                            <label class="form-check-label" for="SMALL1">SMALL</label>
+                        </div>
+                        <div class="single-size">
+                            <input class="form-check-input" type="checkbox" id="MEDIUM1">
+                            <label class="form-check-label" for="MEDIUM1">MEDIUM</label>
+                        </div>
+                        <div class="single-size">
+                            <input class="form-check-input" type="checkbox" id="LARGE1">
+                            <label class="form-check-label" for="LARGE1">LARGE</label>
+                        </div>
+                        <div class="single-size">
+                            <input class="form-check-input" type="checkbox" id="XL1">
+                            <label class="form-check-label" for="XL1">XL</label>
+                        </div>
+                        <div class="single-size">
+                            <input class="form-check-input" type="checkbox" id="XXL1">
+                            <label class="form-check-label" for="XXL1">XXL</label>
+                        </div>
+                        <div class="single-size">
+                            <input class="form-check-input" type="checkbox" id="XXXL1">
+                            <label class="form-check-label" for="XXXL1">XXXL</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-widget brand-widget p-0 bg-transparent">
+                    <h3 class="widget-title">Brand</h3>
+                    <div class="brand-list">
+                        <div class="single-brand">
+                            <div class="brand-left">
+                                <input class="form-check-input" type="checkbox" id="Renuar1">
+                                <label class="form-check-label" for="Renuar1">Renuar</label>
+                            </div>
+                            <span class="brand-count">55</span>
+                        </div>
+                        <div class="single-brand">
+                            <div class="brand-left">
+                                <input class="form-check-input" type="checkbox" id="Zara1">
+                                <label class="form-check-label" for="Zara1">Zara</label>
+                            </div>
+                            <span class="brand-count">64</span>
+                        </div>
+                        <div class="single-brand">
+                            <div class="brand-left">
+                                <input class="form-check-input" type="checkbox" id="Bershka1">
+                                <label class="form-check-label" for="Bershka1">Bershka</label>
+                            </div>
+                            <span class="brand-count">81</span>
+                        </div>
+                        <div class="single-brand">
+                            <div class="brand-left">
+                                <input class="form-check-input" type="checkbox" id="HM1">
+                                <label class="form-check-label" for="HM1">H&M</label>
+                            </div>
+                            <span class="brand-count">77</span>
+                        </div>
+                        <div class="single-brand">
+                            <div class="brand-left">
+                                <input class="form-check-input" type="checkbox" id="Stradivarius1">
+                                <label class="form-check-label" for="Stradivarius1">Stradivarius</label>
+                            </div>
+                            <span class="brand-count">75</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-widget tags-widget p-0 bg-transparent">
+                    <h3 class="widget-title">Tags</h3>
+                    <ul class="tags-list">
+                        <li class="tag-item"><a class="tag-link active" href="shop-grid-left-sidebar.html">Fashion</a></li>
+                        <li class="tag-item"><a class="tag-link" href="shop-grid-left-sidebar.html">Hats</a></li>
+                        <li class="tag-item"><a class="tag-link" href="shop-grid-left-sidebar.html">Vagabond</a></li>
+                        <li class="tag-item"><a class="tag-link" href="shop-grid-left-sidebar.html">Sandal</a></li>
+                        <li class="tag-item"><a class="tag-link" href="shop-grid-left-sidebar.html">Beachwear</a></li>
+                        <li class="tag-item"><a class="tag-link" href="shop-grid-left-sidebar.html">Sunglasses</a></li>
+                        <li class="tag-item"><a class="tag-link" href="shop-grid-left-sidebar.html">Denim</a></li>
+                        <li class="tag-item"><a class="tag-link" href="shop-grid-left-sidebar.html">Magenta</a></li>
+                        <li class="tag-item"><a class="tag-link" href="shop-grid-left-sidebar.html">leather</a></li>
+                        <li class="tag-item"><a class="tag-link" href="shop-grid-left-sidebar.html">Vagabond</a></li>
+                    </ul>
+                </div>
+                <div class="single-widget rating-widget p-0 bg-transparent">
+                    <h3 class="widget-title">Rating</h3>
+                    <ul class="rating-list">
+                        <li class="rating-item">
+                            <a class="rating-link" href="#">
+                                <i class="flaticon-star active"></i>
+                                <i class="flaticon-star active"></i>
+                                <i class="flaticon-star active"></i>
+                                <i class="flaticon-star active"></i>
+                                <i class="flaticon-star active"></i>
+                            </a>
+                        </li>
+                        <li class="rating-item">
+                            <a class="rating-link" href="#">
+                                <i class="flaticon-star active"></i>
+                                <i class="flaticon-star active"></i>
+                                <i class="flaticon-star active"></i>
+                                <i class="flaticon-star active"></i>
+                                <i class="flaticon-star"></i>
+                                <span class="and-up-text">And Up</span>
+                            </a>
+                        </li>
+                        <li class="rating-item">
+                            <a class="rating-link" href="#">
+                                <i class="flaticon-star active"></i>
+                                <i class="flaticon-star active"></i>
+                                <i class="flaticon-star active"></i>
+                                <i class="flaticon-star"></i>
+                                <i class="flaticon-star"></i>
+                                <span class="and-up-text">And Up</span>
+                            </a>
+                        </li>
+                        <li class="rating-item">
+                            <a class="rating-link" href="#">
+                                <i class="flaticon-star active"></i>
+                                <i class="flaticon-star active"></i>
+                                <i class="flaticon-star"></i>
+                                <i class="flaticon-star"></i>
+                                <i class="flaticon-star"></i>
+                                <span class="and-up-text">And Up</span>
+                            </a>
+                        </li>
+                        <li class="rating-item">
+                            <a class="rating-link" href="#">
+                                <i class="flaticon-star active"></i>
+                                <i class="flaticon-star"></i>
+                                <i class="flaticon-star"></i>
+                                <i class="flaticon-star"></i>
+                                <i class="flaticon-star"></i>
+                                <span class="and-up-text">And Up</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- Mirrored from zairito-html.zainiktheme.com/demo/shop-list-right-sidebar.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 08:42:56 GMT -->
+</html>

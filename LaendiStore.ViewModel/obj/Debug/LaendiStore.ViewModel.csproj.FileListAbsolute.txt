@@ -1,6 +1,13 @@
+D:\Laendi_Tech\LaendiStore\LaendiStore.ViewModel\bin\Debug\LaendiStore.ViewModel.dll.config
 D:\Laendi_Tech\LaendiStore\LaendiStore.ViewModel\bin\Debug\LaendiStore.ViewModel.dll
 D:\Laendi_Tech\LaendiStore\LaendiStore.ViewModel\bin\Debug\LaendiStore.ViewModel.pdb
+D:\Laendi_Tech\LaendiStore\LaendiStore.ViewModel\bin\Debug\LaendiStore.Data.dll
+D:\Laendi_Tech\LaendiStore\LaendiStore.ViewModel\bin\Debug\EntityFramework.dll
+D:\Laendi_Tech\LaendiStore\LaendiStore.ViewModel\bin\Debug\LaendiStore.Data.pdb
+D:\Laendi_Tech\LaendiStore\LaendiStore.ViewModel\bin\Debug\LaendiStore.Data.dll.config
+D:\Laendi_Tech\LaendiStore\LaendiStore.ViewModel\bin\Debug\EntityFramework.xml
 D:\Laendi_Tech\LaendiStore\LaendiStore.ViewModel\obj\Debug\LaendiStore.ViewModel.csproj.AssemblyReference.cache
 D:\Laendi_Tech\LaendiStore\LaendiStore.ViewModel\obj\Debug\LaendiStore.ViewModel.csproj.CoreCompileInputs.cache
+D:\Laendi_Tech\LaendiStore\LaendiStore.ViewModel\obj\Debug\LaendiStore.ViewModel.csproj.CopyComplete
 D:\Laendi_Tech\LaendiStore\LaendiStore.ViewModel\obj\Debug\LaendiStore.ViewModel.dll
 D:\Laendi_Tech\LaendiStore\LaendiStore.ViewModel\obj\Debug\LaendiStore.ViewModel.pdb

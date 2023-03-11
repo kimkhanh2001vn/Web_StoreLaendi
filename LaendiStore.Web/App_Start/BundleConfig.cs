@@ -9,7 +9,8 @@ namespace LaendiStore.Web
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/assets/js/jquery-3.6.0.min.js"));
+                        "~/assets/js/jquery-3.6.0.min.js",
+                        "~/assests/js/bootstrap.min.js"));
 
             bundles.Add(new ScriptBundle("~/assets/js").Include(
                       "~/assets/js/plugins.js",

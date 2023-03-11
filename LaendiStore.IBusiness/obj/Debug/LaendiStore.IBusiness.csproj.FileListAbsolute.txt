@@ -1,3 +1,4 @@
+D:\Laendi_Tech\LaendiStore\LaendiStore.IBusiness\bin\Debug\LaendiStore.IBusiness.dll.config
 D:\Laendi_Tech\LaendiStore\LaendiStore.IBusiness\bin\Debug\LaendiStore.IBusiness.dll
 D:\Laendi_Tech\LaendiStore\LaendiStore.IBusiness\bin\Debug\LaendiStore.IBusiness.pdb
 D:\Laendi_Tech\LaendiStore\LaendiStore.IBusiness\bin\Debug\LaendiStore.Data.dll

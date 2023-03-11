@@ -21,10 +21,10 @@ D:\Laendi_Tech\LaendiStore\LaendiStore.Model\bin\Debug\System.Memory.xml
 D:\Laendi_Tech\LaendiStore\LaendiStore.Model\bin\Debug\System.Numerics.Vectors.xml
 D:\Laendi_Tech\LaendiStore\LaendiStore.Model\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\Laendi_Tech\LaendiStore\LaendiStore.Model\bin\Debug\System.Threading.Tasks.Extensions.xml
-D:\Laendi_Tech\LaendiStore\LaendiStore.Model\obj\Debug\LaendiStore.Data.Migrations.dbfirst.resources
+D:\Laendi_Tech\LaendiStore\LaendiStore.Model\obj\Debug\LaendiStore.Data.csproj.AssemblyReference.cache
+D:\Laendi_Tech\LaendiStore\LaendiStore.Model\obj\Debug\LaendiStore.Data.Migrations.DbUpdate.resources
 D:\Laendi_Tech\LaendiStore\LaendiStore.Model\obj\Debug\LaendiStore.Data.csproj.GenerateResource.cache
 D:\Laendi_Tech\LaendiStore\LaendiStore.Model\obj\Debug\LaendiStore.Data.csproj.CoreCompileInputs.cache
 D:\Laendi_Tech\LaendiStore\LaendiStore.Model\obj\Debug\LaendiStore.Data.csproj.CopyComplete
 D:\Laendi_Tech\LaendiStore\LaendiStore.Model\obj\Debug\LaendiStore.Data.dll
 D:\Laendi_Tech\LaendiStore\LaendiStore.Model\obj\Debug\LaendiStore.Data.pdb
-D:\Laendi_Tech\LaendiStore\LaendiStore.Model\obj\Debug\LaendiStore.Data.csproj.AssemblyReference.cache

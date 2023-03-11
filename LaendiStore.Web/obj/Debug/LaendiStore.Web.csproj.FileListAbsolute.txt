@@ -1,5 +1,3 @@
-D:\Laendi_Tech\LaendiStore\LaendiStore.Web\obj\Debug\LaendiStore.Web.csproj.AssemblyReference.cache
-D:\Laendi_Tech\LaendiStore\LaendiStore.Web\obj\Debug\LaendiStore.Web.csproj.CoreCompileInputs.cache
 D:\Laendi_Tech\LaendiStore\LaendiStore.Web\bin\LaendiStore.Web.dll.config
 D:\Laendi_Tech\LaendiStore\LaendiStore.Web\bin\LaendiStore.Web.dll
 D:\Laendi_Tech\LaendiStore\LaendiStore.Web\bin\LaendiStore.Web.pdb
@@ -56,8 +54,10 @@ D:\Laendi_Tech\LaendiStore\LaendiStore.Web\bin\Antlr3.Runtime.dll
 D:\Laendi_Tech\LaendiStore\LaendiStore.Web\bin\EntityFramework.dll
 D:\Laendi_Tech\LaendiStore\LaendiStore.Web\bin\EntityFramework.SqlServer.dll
 D:\Laendi_Tech\LaendiStore\LaendiStore.Web\bin\LaendiStore.Business.dll
+D:\Laendi_Tech\LaendiStore\LaendiStore.Web\bin\LaendiStore.Common.dll
 D:\Laendi_Tech\LaendiStore\LaendiStore.Web\bin\LaendiStore.Data.dll
 D:\Laendi_Tech\LaendiStore\LaendiStore.Web\bin\LaendiStore.IBusiness.dll
+D:\Laendi_Tech\LaendiStore\LaendiStore.Web\bin\LaendiStore.ViewModel.dll
 D:\Laendi_Tech\LaendiStore\LaendiStore.Web\bin\Microsoft.Bcl.AsyncInterfaces.dll
 D:\Laendi_Tech\LaendiStore\LaendiStore.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\Laendi_Tech\LaendiStore\LaendiStore.Web\bin\Microsoft.Owin.dll
@@ -84,9 +84,13 @@ D:\Laendi_Tech\LaendiStore\LaendiStore.Web\bin\WebActivatorEx.dll
 D:\Laendi_Tech\LaendiStore\LaendiStore.Web\bin\WebGrease.dll
 D:\Laendi_Tech\LaendiStore\LaendiStore.Web\bin\LaendiStore.Business.pdb
 D:\Laendi_Tech\LaendiStore\LaendiStore.Web\bin\LaendiStore.Business.dll.config
+D:\Laendi_Tech\LaendiStore\LaendiStore.Web\bin\LaendiStore.Common.pdb
 D:\Laendi_Tech\LaendiStore\LaendiStore.Web\bin\LaendiStore.IBusiness.pdb
+D:\Laendi_Tech\LaendiStore\LaendiStore.Web\bin\LaendiStore.IBusiness.dll.config
 D:\Laendi_Tech\LaendiStore\LaendiStore.Web\bin\LaendiStore.Data.pdb
 D:\Laendi_Tech\LaendiStore\LaendiStore.Web\bin\LaendiStore.Data.dll.config
+D:\Laendi_Tech\LaendiStore\LaendiStore.Web\bin\LaendiStore.ViewModel.pdb
+D:\Laendi_Tech\LaendiStore\LaendiStore.Web\bin\LaendiStore.ViewModel.dll.config
 D:\Laendi_Tech\LaendiStore\LaendiStore.Web\bin\EntityFramework.xml
 D:\Laendi_Tech\LaendiStore\LaendiStore.Web\bin\EntityFramework.SqlServer.xml
 D:\Laendi_Tech\LaendiStore\LaendiStore.Web\bin\Microsoft.Bcl.AsyncInterfaces.xml
@@ -110,6 +114,8 @@ D:\Laendi_Tech\LaendiStore\LaendiStore.Web\bin\System.Web.WebPages.Razor.xml
 D:\Laendi_Tech\LaendiStore\LaendiStore.Web\bin\Newtonsoft.Json.xml
 D:\Laendi_Tech\LaendiStore\LaendiStore.Web\bin\Antlr3.Runtime.pdb
 D:\Laendi_Tech\LaendiStore\LaendiStore.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Laendi_Tech\LaendiStore\LaendiStore.Web\obj\Debug\LaendiStore.Web.csproj.AssemblyReference.cache
+D:\Laendi_Tech\LaendiStore\LaendiStore.Web\obj\Debug\LaendiStore.Web.csproj.CoreCompileInputs.cache
 D:\Laendi_Tech\LaendiStore\LaendiStore.Web\obj\Debug\LaendiStore.Web.csproj.CopyComplete
 D:\Laendi_Tech\LaendiStore\LaendiStore.Web\obj\Debug\LaendiStore.Web.dll
 D:\Laendi_Tech\LaendiStore\LaendiStore.Web\obj\Debug\LaendiStore.Web.pdb

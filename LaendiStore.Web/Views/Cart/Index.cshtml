@@ -1,0 +1,251 @@
+﻿@using LaendiStore.ViewModel
+@{
+    Layout = null;
+    var orders = (List<CartViewModel>)ViewBag.listOrder;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cart - Laendi Store</title>
+    <meta name="description" content="Zairito - eCommerce HTML Template" />
+    <meta name="keywords" content="business,eCommerce, Ecommerce, ecommerce, shop, shopify, shopify ecommerce, creative, woocommerce, design, gallery, minimal, modern, html, html5, responsive" />
+    <meta name="author" content="Zairito" />
+
+    <!-- fonts file -->
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allison&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+
+    <!-- css file  -->
+    @Styles.Render("~/assets/css")
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="~/assets/images/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+    @Html.Action("Header", "Home")
+
+    <!-- breadcrumb area start here  -->
+    <div class="breadcrumb-area">
+        <div class="container">
+            <div class="breadcrumb-wrap text-center">
+                <h2 class="page-title">Cart</h2>
+                <ul class="breadcrumb-pages">
+                    <li class="page-item"><a class="page-item-link" href="index.html">Home</a></li>
+                    <li class="page-item">Shopping Cart</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- breadcrumb area end here  -->
+    <!-- wish-list area start here  -->
+    <div class="wish-list-area cart-page-area section">
+        <div class="container">
+            @if (orders.Count > 0)
+            {
+                <div class="row">
+                    <div class="col-12 wish-list-table">
+
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Product Name</th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col">Quantity</th>
+                                        <th scope="col">Total</th>
+                                        <th scope="col">Remove</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    @foreach (var item in orders)
+                                    {
+                                        var total = item.Products.PromotionPrice * item.Quantity;
+
+                                        <tr class="cart-page-item">
+                                            <td>
+                                                <div class="single-grid-product m-0">
+                                                    <div class="product-top">
+                                                        <a href="single-product.html"><img class="product-thumbnal" src="~/assets/images/product-image-6.png" alt="cart"></a>
+                                                        <div class="product-flags">
+                                                            <span class="product-flag sale">SALE</span>
+                                                            <span class="product-flag discount">-15%</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-info text-center">
+                                                        <h4 class="product-catagory">@item.Products.Name</h4>
+                                                        <h3 class="product-name"><a class="product-link" href="single-product.html">@item.Products.Description</a></h3>
+                                                        <ul class="product-review">
+                                                            <li class="review-item active"><i class="flaticon-star"></i></li>
+                                                            <li class="review-item active"><i class="flaticon-star"></i></li>
+                                                            <li class="review-item active"><i class="flaticon-star"></i></li>
+                                                            <li class="review-item"><i class="flaticon-star"></i></li>
+                                                            <li class="review-item"><i class="flaticon-star"></i></li>
+                                                        </ul>
+                                                        <div class="variable-single-item color-switch">
+                                                            <div class="product-variable-color">
+                                                                <label>
+                                                                    <input name="modal-product-color"
+                                                                           class="color-select" type="radio" checked="">
+                                                                    <span class="product-color-black"></span>
+                                                                </label>
+                                                                <label>
+                                                                    <input name="modal-product-color"
+                                                                           class="color-select" type="radio">
+                                                                    <span class="product-color-tomato"></span>
+                                                                </label>
+
+                                                                <label>
+                                                                    <input name="modal-product-color"
+                                                                           class="color-select" type="radio">
+                                                                    <span class="product-color-gray"></span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="product-price text-center">
+                                                    <span class="regular-price">@Html.FormatValue(item.Products.Price, "{0:#,##0}") VNĐ</span>
+                                                    <span class="price">@Html.FormatValue(item.Products.PromotionPrice, "{0:#,##0}") VNĐ</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="cart-quantity input-group">
+                                                    <div class="increase-btn dec qtybutton btn">-</div>
+                                                    <input class="qty-input cart-plus-minus-box" type="text" name="qtybutton" value="@item.Quantity" readonly />
+                                                    <div class="increase-btn inc qtybutton btn">+</div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <h1 class="cart-table-item-total">@total</h1>
+                                            </td>
+                                            <td><button class="delet-btn" title="Delete Item"><img src="~/assets/images/close.svg" alt="close"/></button></td>
+                                        </tr>
+                                    }
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+            <!-- Cart Page Bottom box area Start -->
+            <div class="row cart-page-bottom-box-wrap">
+
+                <!-- Cart page bottom box -->
+                <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                    <div class="cart-page-bottom-box">
+                        <h2 class="bottom-box-title">Discount Codes</h2>
+
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="coupon_code" placeholder="Enter your coupon code" />
+                            </div>
+
+                            <div class="form-button text-center">
+                                <button type="button" class="form-btn">Apply Cupon</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+                <!-- Cart page bottom box -->
+                <!-- Cart page bottom box -->
+                <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                    <div class="cart-page-bottom-box">
+                        <h2 class="bottom-box-title">Shipping</h2>
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="coupon_code" placeholder="Enter your country" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="coupon_code" placeholder="Enter your city" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="coupon_code" placeholder="Enter your zip code" />
+                            </div>
+
+                            <div class="form-button text-center">
+                                <button type="button" class="form-btn">Apply Now</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+                <!-- Cart page bottom box -->
+                <!-- Cart page bottom box -->
+                <div class="col-12 col-sm-12 col-md-12 col-lg-4">
+                    <div class="cart-page-bottom-box cart-page-sub-total-box">
+
+                        <div class="sub-total-inner-box d-flex justify-content-between align-items-center">
+                            <h2 class="bottom-box-title m-0">Subtotal :</h2>
+                            <h2 class="bottom-box-title m-0">$542.00</h2>
+                        </div>
+
+                        <div class="sub-total-inner-box d-flex justify-content-between align-items-center">
+                            <div class="cart-inner-shipping-title">
+                                <span>Shipping</span>
+                                <p class="shipping-state m-0">Shipping to Ho Chi minh City</p>
+                            </div>
+                            <h2 class="bottom-box-title m-0">$25.00</h2>
+                        </div>
+
+                        <div class="sub-total-inner-box d-flex justify-content-between align-items-center">
+                            <h2 class="bottom-box-title m-0">Total</h2>
+                            <h2 class="bottom-box-title cart-page-final-total m-0">$567.00</h2>
+                        </div>
+
+                        <div class="form-button text-center">
+                            <a href="checkout.html" class="form-btn proceed-to-checkout-btn">Proceed To Cheeckout</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cart page bottom box -->
+
+            </div>
+            <!-- Cart Page Bottom box area End -->
+
+        </div>
+    </div>
+    <!-- wish-list area end here  -->
+    <!-- shop map area start here  -->
+    <div class="shop-map-area">
+        <div class="shop-info">
+            <div class="shop-info-left">
+                <h2 class="shop-info-title">Local Pickup  Available</h2>
+                <p class="shop-info-sub-title">301 Front St Toronto, Canada</p>
+                <ul class="shop-opaing-time">
+                    <li class="open-time">Mon - Fri, 8:30am - 10:30pm,</li>
+                    <li class="open-time">Sunday, 8:30am - 10:30pm</li>
+                </ul>
+            </div>
+            <div class="shop-info-right">
+                <span class="label">Shops Image</span>
+            </div>
+        </div>
+        <div id="gmap" class="google-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1839.0179632416985!2d89.5538504127622!3d22.801132631062536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ff8f2b1098bf95%3A0xbce09c90b98f8380!2sJust%20Orders%20Khulna!5e0!3m2!1sen!2sbd!4v1636005141952!5m2!1sen!2sbd" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+    <!-- shop map area start here  -->
+
+
+    @Html.Action("Footer", "Home")
+</body>
+
+<!-- Mirrored from zairito-html.zainiktheme.com/demo/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Feb 2023 08:43:04 GMT -->
+</html>
+

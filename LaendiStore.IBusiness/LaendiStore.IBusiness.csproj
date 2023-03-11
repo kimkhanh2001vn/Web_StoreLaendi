@@ -41,9 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ICategoryReponsitory.cs" />
     <Compile Include="ICustomerRepository.cs" />
     <Compile Include="IGenericReponsitory.cs" />
     <Compile Include="IProductReponsitory.cs" />
+    <Compile Include="IUserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -51,6 +53,9 @@
       <Project>{BA7FD45E-8BC8-4835-9458-4AD23A1267C3}</Project>
       <Name>LaendiStore.Data</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

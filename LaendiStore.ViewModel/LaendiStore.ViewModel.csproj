@@ -41,7 +41,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CartViewModel.cs" />
+    <Compile Include="CategoryViewModel.cs" />
+    <Compile Include="CustomerViewModel.cs" />
+    <Compile Include="ProductByCategoryViewModel.cs" />
+    <Compile Include="ProductViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LaendiStore.Model\LaendiStore.Data.csproj">
+      <Project>{BA7FD45E-8BC8-4835-9458-4AD23A1267C3}</Project>
+      <Name>LaendiStore.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

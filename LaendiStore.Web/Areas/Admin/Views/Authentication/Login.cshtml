@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     Layout = null;
 }
 <!doctype html>
@@ -14,7 +13,7 @@
 
     <meta name="description" content="Login and Register Form HTML Template - developed by 'ceosdesigns' - sold exclusively on 'themeforest.net'">
     <meta name="author" content="ceosdesigns.sk">
-    <title>Login - Laendi Store</title>
+    <title>Login Admin - Laendi Store</title>
 
     <!-- favicon icon -->
     <link rel="shortcut icon" href="~/assets/images/favicon.png" type="image/x-icon">
@@ -25,15 +24,7 @@
     <!-- Template CSS files  // -->
 </head>
 <body>
-    <!-- // Preloader -->
-    <div id="nm-preloader" class="nm-aic nm-vh-md-100">
-        <div class="nm-ripple">
-            <div></div>
-            <div></div>
-        </div>
-    </div>
-    <!-- Preloader // -->
-
+    
     <main class="d-flex">
         <div class="container main-container">
             <div class="row nm-row">
@@ -53,12 +44,17 @@
                                 <p class="h2">Welcome Back!</p>
                                 <p class="h2">Live the experience</p>
                             </div>
-                            <form>
+                            @Html.ValidationSummary(true, null, new { @class = "alert alert-danger" })
+                            
+                            @using (Html.BeginForm("Login", "Authentication", FormMethod.Post))
+                            {
+                                @Html.AntiForgeryToken()
+
                                 <div class="form-group">
-                                    <label for="inputEmail">Email</label>
+                                    <label for="inputEmail">Username</label>
                                     <div class="input-group nm-gp">
                                         <span class="nm-gp-pp"><i class="fas fa-envelope-open"></i></span>
-                                        <input id="inputEmail" class="form-control" type="email" tabindex="1" placeholder="Your email" required>
+                                        <input id="UserName" name="UserName" class="form-control" type="text" tabindex="1" placeholder="Your Username" required>
                                     </div>
                                 </div>
 
@@ -66,7 +62,7 @@
                                     <label for="inputPassword">Password</label>
                                     <div class="input-group nm-gp">
                                         <span class="nm-gp-pp"><i class="fas fa-lock"></i></span>
-                                        <input id="inputPassword" class="form-control" type="password" tabindex="2" placeholder="Enter your password" required>
+                                        <input id="PassWord" name="PassWord" class="form-control" type="password" tabindex="2" placeholder="Enter your password" required>
                                     </div>
                                 </div>
 
@@ -103,7 +99,7 @@
                                     No account yet?
                                     <a href="/Admin/Authentication/Register">Signup</a>
                                 </p>
-                            </form>
+                            }
                         </div>
                     </div>
                 </div>

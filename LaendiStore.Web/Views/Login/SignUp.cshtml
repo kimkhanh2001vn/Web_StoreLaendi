@@ -37,88 +37,6 @@
     </div>
     <!-- Preloader Area End -->
     @Html.Action("Header", "Home")
-    <!-- Cart Offcanvas Sidebar Menu area Start here  -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvasSidebar" aria-labelledby="cartOffcanvasSidebarLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="cartOffcanvasSidebarLabel">Shopping Cart</h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-
-            <div class="cart-product-list">
-
-                <!-- Product item start -->
-                <div class="product-item cart-product-item">
-                    <div class="single-grid-product">
-                        <div class="product-top">
-                            <a href="single-product.html"><img class="product-thumbnal" src="assets/images/cart-sidebar-img1.png" alt="cart"></a>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-name-part">
-                                <h4 class="product-catagory">ELLA - HALOTHEMES</h4>
-                                <h3 class="product-name"><a class="product-link" href="single-product.html">Premier Cropped Jean</a></h3>
-
-                                <div class="cart-quantity input-group">
-                                    <div class="increase-btn dec qtybutton btn">-</div>
-                                    <input class="qty-input cart-plus-minus-box" type="text" name="qtybutton" value="1" readonly />
-                                    <div class="increase-btn inc qtybutton btn">+</div>
-                                </div>
-
-                                <button class="cart-remove-btn">Remove</button>
-                            </div>
-                            <div class="product-price">
-                                <span class="regular-price">$220.08</span>
-                                <span class="price">$150.08</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product item end -->
-                <!-- Product item start -->
-                <div class="product-item cart-product-item">
-                    <div class="single-grid-product">
-                        <div class="product-top">
-                            <a href="single-product.html"><img class="product-thumbnal" src="assets/images/cart-sidebar-img2.png" alt="cart"></a>
-                        </div>
-                        <div class="product-info">
-                            <div class="product-name-part">
-                                <h4 class="product-catagory">New - Collections</h4>
-                                <h3 class="product-name"><a class="product-link" href="single-product.html">Premier Bag Jean</a></h3>
-
-                                <div class="cart-quantity input-group">
-                                    <div class="increase-btn dec qtybutton btn">-</div>
-                                    <input class="qty-input cart-plus-minus-box" type="text" name="qtybutton" value="1" readonly />
-                                    <div class="increase-btn inc qtybutton btn">+</div>
-                                </div>
-
-                                <button class="cart-remove-btn">Remove</button>
-                            </div>
-                            <div class="product-price">
-                                <span class="regular-price">$215.08</span>
-                                <span class="price">$150.08</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product item end -->
-            </div>
-
-            <div class="total-bottom-part">
-                <div class="total-count d-flex">
-                    <h3>Total</h3>
-                    <h4>$567.00</h4>
-                </div>
-                <a href="checkout.html" class="proceed-to-btn d-block text-center">
-                    Proceed To Checkout
-                </a>
-                <div class="view-cart-go">
-                    <a href="cart.html">View Cart</a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <!-- Cart Offcanvas Sidebar Menu area end here  -->
     <!-- breadcrumb area start here  -->
     <div class="breadcrumb-area">
         <div class="container">
@@ -142,27 +60,36 @@
                             <span class="far fa-user"></span>
                         </div>
                         <h1 class="text-center mb-4">Sign Up</h1>
-                        <form class="login-form">
-                            <div class="form-group">
-                                <input type="text" class="form-control rounded-left" placeholder="Name" required="">
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control rounded-left" placeholder="Email" required="">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control rounded-left" placeholder="Username" required="">
-                            </div>
-                            <div class="form-group d-flex">
-                                <input type="password" class="form-control rounded-left" placeholder="Password" required="">
-                            </div>
-                            <div class="form-group">
-                                <button type="button" class="form-control btn btn-primary rounded submit px-3 primary-btn">Sign Up</button>
+                        @using (Html.BeginForm("SignUp", "Login", FormMethod.Post, new { @class = "login-form" }))
+                        {
+                            @Html.AntiForgeryToken()
+                            <div class="row">
+                                <p>@Html.ValidationSummary(true, null, new { @class = "alert alert-danger" })</p>
+
+                                <div class="form-group">
+                                    <input type="text" id="CustomerName" name="CustomerName" class="form-control rounded-left" placeholder="Name" required="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" id="CustomerEmail" name="CustomerEmail" class="form-control rounded-left" placeholder="Email" required="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" id="UserNameRes" name="UserName" class="form-control rounded-left" placeholder="Username" required="">
+                                </div>
+                                <div class="form-group d-flex">
+                                    <input type="password" id="PassWord" name="PassWord" class="form-control rounded-left" placeholder="Password" required="">
+                                </div>
+                                <div class="form-group d-flex">
+                                    <input type="password" id="ConfirmPassWord" name="ConfirmPassWord" class="form-control rounded-left" placeholder="Confirm Password" required="">
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="form-control btn btn-primary rounded submit px-3 primary-btn">Sign Up</button>
+                                </div>
                             </div>
 
                             <div class="already-have-account">
                                 Already have an account?<a href="/login/signin" class="forget-password-link">Sign In</a>
                             </div>
-                        </form>
+                        }
                     </div>
                 </div>
             </div>

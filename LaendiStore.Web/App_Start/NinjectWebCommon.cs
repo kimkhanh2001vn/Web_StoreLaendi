@@ -62,7 +62,9 @@ namespace LaendiStore.Web.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            kernel.Bind<ICategoryReponsitory>().To<CategoryReponsitory>().InRequestScope();
             kernel.Bind<IProductReponsitory>().To<ProductReponsitory>().InRequestScope();
+            kernel.Bind<ICustomerRepository>().To<CustomerRepository>().InRequestScope();
         }        
     }
 }
